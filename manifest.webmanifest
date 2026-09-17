@@ -1,0 +1,26 @@
+{
+  "name": "OrgSuite PWA Studio",
+  "short_name": "PWA Studio",
+  "description": "PSE Management workplace tool to audit, package, and install OrgSuite progressive web apps.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#070B14",
+  "theme_color": "#6D5EF6",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
