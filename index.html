@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OrgSuite PWA Studio — PSE Management</title>
+  <meta name="description" content="Workplace PWA studio for OrgSuite. Audit public HTTPS apps, review install readiness, and prepare store packaging for PSE Management." />
+  <meta name="theme-color" content="#6D5EF6" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icons/icon.svg" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand"><span class="mark" aria-hidden="true"></span> OrgSuite PWA Studio</div>
+      <nav class="nav-links">
+        <a href="#audit">Audit</a>
+        <a href="#connectors">Connectors</a>
+        <a href="https://www.pwabuilder.com/" rel="noopener">Official PWABuilder</a>
+        <a href="https://linear.app/pse-management" rel="noopener">Linear</a>
+      </nav>
+    </header>
+    <section class="hero" id="audit">
+      <div class="kicker">PSE Management workplace</div>
+      <h1>Ship OrgSuite as an installable app</h1>
+      <p class="lede">Audit a public HTTPS site for PWA readiness, then package through official PWA Builder and your store developer accounts. This is an OrgSuite workplace surface — not a Microsoft login.</p>
+      <form class="audit-card" id="audit-form">
+        <div class="audit-row">
+          <input id="pwa-url" name="url" type="url" required placeholder="https://your-orgsuite-app.vercel.app" />
+          <button class="primary" type="submit">Start audit</button>
+          <button class="ghost" type="button" id="install-btn" hidden>Install this studio</button>
+        </div>
+        <p class="hint">Use a public HTTPS origin. Private or auth-walled apps cannot be fully scored from the browser.</p>
+        <div id="results"></div>
+      </form>
+    </section>
+    <section class="grid">
+      <article class="card">
+        <h2>Store path</h2>
+        <div class="stores">
+          <div class="store"><b>Windows</b><span class="muted">Partner Center package IDs required</span></div>
+          <div class="store"><b>iOS</b><span class="muted">Apple Developer wrapping</span></div>
+          <div class="store"><b>Android</b><span class="muted">Play Console TWA / package</span></div>
+        </div>
+        <p class="hint">After the local audit, finish packaging at <a href="https://www.pwabuilder.com/" rel="noopener">pwabuilder.com</a> with the same public URL.</p>
+      </article>
+      <article class="card" id="connectors">
+        <h2>Workplace connectors</h2>
+        <div class="connectors">
+          <div class="chip"><span>GitHub</span><span class="dot" title="Verified this session"></span></div>
+          <div class="chip"><span>Vercel</span><span class="dot" title="Verified this session"></span></div>
+          <div class="chip"><span>Linear</span><span class="dot" title="Verified this session"></span></div>
+          <div class="chip"><span>Cloudflare</span><span class="dot warn-dot"></span></div>
+          <div class="chip"><span>GoDaddy</span><span class="dot warn-dot"></span></div>
+          <div class="chip"><span>Make</span><span class="dot warn-dot"></span></div>
+          <div class="chip"><span>Gmail / Outlook</span><span class="dot warn-dot"></span></div>
+          <div class="chip"><span>Teams / Chat</span><span class="dot warn-dot"></span></div>
+          <div class="chip"><span>Figma / Canva</span><span class="dot warn-dot"></span></div>
+          <div class="chip"><span>Stripe</span><span class="dot warn-dot"></span></div>
+        </div>
+      </article>
+    </section>
+    <footer>OrgSuite Codex App · PSE SENT · Source <a href="https://github.com/pointgoddesscc-sketch/orgsuite-pwa-studio" rel="noopener">orgsuite-pwa-studio</a></footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
